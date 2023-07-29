@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ForLoopProj
 {
-    internal class MagicCube
+    internal class MagicSquare
     {
         public static Boolean isMagicSquare(int[,] mat)
         {

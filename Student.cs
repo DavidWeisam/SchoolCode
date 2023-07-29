@@ -1,88 +1,90 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Remoting.Channels;
-using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NewOne
+namespace IfSwitchProject
 {
-	internal class Student
-	{
-		private string name;
-		private int grd1;
-		private int grd2;
-		private int grd3;
-		
+    class Sturdent
+    {
+        private string name;
+        private int grade1;
+        private int grade2;
+        private int grade3;
+        
 
-		public Student(string name, int grd1, int grd2, int grd3)
-		{
-			this.name = name;
-			this.grd1 = grd1;
-			this.grd2 = grd2;
-			this.grd3 = grd3;
-		}
+        public Sturdent(string name, int grade1, int grade2, int grade3)
+        {
+            this.name = name;
+            this.grade1 = grade1;
+            this.grade2 = grade2;
+            this.grade3 = grade3;
 
-		public Student(string name)
-		{
-			this.name = name;
-			this.grd1 = 0;
-			this.grd2 = 0;
-			this.grd3 = 0;
-		}
+        }
 
-		public string GetName()
-		{
-			return this.name;
-		}
+        public Sturdent(string name)
+        {
+            this.name = name;
+            this.grade1 = 0;
+            this.grade2 = 0;
+            this.grade3 = 0;
 
-		public int GetGrd1()
-		{
-			return grd1;
-		}
+        }
 
-		public int GetGrd2()
-		{
-			return grd2;
-		}
+        public string GetName()
+        {
+            return this.name;
+        }
 
-		public int GetGrd3()
-		{
-			return grd3;
-		}
+        public int GetGrade1()
+        {
+            return this.grade1;
+        }
 
-		public void SetName(string name)
-		{
-			this.name = name;
-		}
+        public int GetGrade2()
+        {
+            return this.grade2;
 
-		public void SetGrd1(int grd1)
-		{
-			this.grd1 = grd1;
-		}
+        }
 
-		public void SetGrd2(int grd2)
-		{
-			this.grd2 = grd2;
-		}
+        public int GetGrade3()
+        {
+            return this.grade3;
+        }
 
-		public void SetGrd3(int grd3)
-		{
-			this.grd3 = grd3;
-		}
+        // פעולות עדכון
+        public void SetGrade1(int grade)
+        {
+            this.grade1 = grade;
+        }
 
-		public double GetEvg()
-		{
-			return((this.grd1 + this.grd2 + this.grd3) / 3.0);
-		}
+        public void SetGrade2(int grade)
+        {
+            this.grade2 = grade;
+        }
 
-		public override string ToString()
-		{
-			return ($"Name: {name}, first grade: {grd1}, second grade: {grd2}, third: {grd3}, average: {GetEvg()}");
-		}
+        public void SetGrade3(int grade)
+        {
+            this.grade3 = grade;
+        }
+
+        // מחרוזת המתארת את העצם
+        public override string ToString()
+        {
+            string str = this.name + "(";
+            str += this.grade1 + ", ";
+            str += this.grade2 + ", ";
+            str += this.grade3 + ")";
+            return str;
+
+        }
+
+
+    }
 
 
 
-	}
+
 }
+
